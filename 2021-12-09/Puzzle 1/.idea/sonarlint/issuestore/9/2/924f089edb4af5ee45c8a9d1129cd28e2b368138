@@ -1,0 +1,18 @@
+
+P
+java:S1144".Remove this unused private "puzzleOne" method.(İìÅ’úÿÿÿÿ8ıƒŒïÙ/
+Z	java:S106Z"9Replace this use of System.out or System.err by a logger.(ö™µ–úÿÿÿÿ8–Ü‹ìÙ/
+j
+java:S2095±"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(†Õ…Ê8†âÃğÙ/
+Z	java:S106S"9Replace this use of System.out or System.err by a logger.(“¡ã‰ûÿÿÿÿ8–Ü‹ìÙ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ö™µ–úÿÿÿÿ8³€‹ìÙ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ˆˆŠÕüÿÿÿÿ8åÆüìÙ/
+o
+java:S3776n"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ªà˜8ë¿¶îÙ/
+o
+java:S3776*"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Ú¶“´8àƒîÙ/
+X	java:S125"<This block of commented-out lines of code should be removed.(§Ş¸Ö8ıƒŒïÙ/
+Z	java:S106Y"9Replace this use of System.out or System.err by a logger.(ñà÷•üÿÿÿÿ8å×ëğÙ/
+w
+java:S2293²"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÀŠı”8†âÃğÙ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÂûÁ¥ÿÿÿÿÿ8³€‹ìÙ/

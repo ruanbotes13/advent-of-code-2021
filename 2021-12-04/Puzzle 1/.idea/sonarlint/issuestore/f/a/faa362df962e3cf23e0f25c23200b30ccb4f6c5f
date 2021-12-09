@@ -1,0 +1,17 @@
+
+Z	java:S106/"9Replace this use of System.out or System.err by a logger.(ì«à¸ùÿÿÿÿ8§Ğ‚ Ø/
+q
+java:S1104"TMake winnings a static final constant or non-public and provide accessors if needed.(‹¯‘Œ8£ö¥¡Ø/
+u
+java:S1104"SMake numbers a static final constant or non-public and provide accessors if needed.(ğæÈ¼şÿÿÿÿ8¶µËØ/
+[
+java:S1155^">Use isEmpty() to check whether the collection is empty or not.(Æ‘é8ÿíÎ¡Ø/
+Z	java:S106F"9Replace this use of System.out or System.err by a logger.(®ĞÓœşÿÿÿÿ8“™¹¡Ø/
+Z	java:S106G"9Replace this use of System.out or System.err by a logger.(Ú½ğ¡ùÿÿÿÿ8«¾´¡Ø/
+o
+java:S1104"RMake boards a static final constant or non-public and provide accessors if needed.(²·¸–8‘»ÍØ/
+X	java:S125"<This block of commented-out lines of code should be removed.(¬Úºò8öÃÁ Ø/
+U	java:S1060"9Replace this use of System.out or System.err by a logger.(–ù°î8Öª÷ Ø/
+Z	java:S106E"9Replace this use of System.out or System.err by a logger.(ìñŒ›ÿÿÿÿÿ8«¾´¡Ø/
+O
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8ª¯ßØ/

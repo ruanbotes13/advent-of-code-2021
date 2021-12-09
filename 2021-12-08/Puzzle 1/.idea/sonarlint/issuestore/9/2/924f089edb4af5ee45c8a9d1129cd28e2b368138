@@ -1,0 +1,39 @@
+
+:
+java:S1643£"Use a StringBuilder instead.(¸£ãã8–®ğÇÙ/
+w
+java:S2293»"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÀŠı”8–®ğÇÙ/
+e
+java:S2259b"CA "NullPointerException" could be thrown; "seven" is nullable here.(€ó¬­øÿÿÿÿ8Ñ¬óÇÙ/
+U	java:S106,"9Replace this use of System.out or System.err by a logger.(Áß”î8×ıÃÙ/
+:
+java:S1643‘"Use a StringBuilder instead.(é‡ùß8–®ğÇÙ/
+X
+java:S1854«":Remove this useless assignment to local variable "number".(Ü¼˜Â8–®ğÇÙ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÂûÁ¥ÿÿÿÿÿ8ÁÀÃÙ/
+:
+java:S1643"Use a StringBuilder instead.(Î¨Å8–®ğÇÙ/
+t
+java:S37762"RRefactor this method to reduce its Cognitive Complexity from 69 to the 15 allowed.(¶ßÄûÿÿÿÿ8­‰ãÅÙ/
+:
+java:S1643¦"Use a StringBuilder instead.(Å†Ä¥8–®ğÇÙ/
+?
+java:S1643 "Use a StringBuilder instead.(ùªüÿÿÿÿ8–®ğÇÙ/
+?
+java:S1643‹"Use a StringBuilder instead.(¥ƒ»¤şÿÿÿÿ8–®ğÇÙ/
+9
+java:S1643š"Use a StringBuilder instead.(¦Áğn8–®ğÇÙ/
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(“¡ã‰ûÿÿÿÿ8ÌºüÃÙ/
+j
+java:S2095º"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(†Õ…Ê8–®ğÇÙ/
+Z	java:S106/"9Replace this use of System.out or System.err by a logger.(ö™µ–úÿÿÿÿ8ÌºüÃÙ/
+?
+java:S1643—"Use a StringBuilder instead.(å›†çıÿÿÿÿ8–®ğÇÙ/
+?
+java:S1643”"Use a StringBuilder instead.(äèÚ¦ùÿÿÿÿ8–®ğÇÙ/
+[	java:S106¶"9Replace this use of System.out or System.err by a logger.(ö™µ–úÿÿÿÿ8–®ğÇÙ/
+?
+java:S1643"Use a StringBuilder instead.(»º«Äşÿÿÿÿ8–®ğÇÙ/
+d
+java:S2259a"BA "NullPointerException" could be thrown; "four" is nullable here.(–ãŞøÿÿÿÿ8Ñ¬óÇÙ/
+V	java:S106´"9Replace this use of System.out or System.err by a logger.(‚¨Ö§8–®ğÇÙ/
