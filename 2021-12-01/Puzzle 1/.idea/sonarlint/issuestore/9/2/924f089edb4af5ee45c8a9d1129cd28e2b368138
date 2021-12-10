@@ -1,11 +1,0 @@
-
-i
-java:S20956"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(†Õ…Ê8Üçù¤×/
-{
-java:S22937"YReplace the type specification in this constructor call with the diamond operator ("<>").(¸ÜÑ…şÿÿÿÿ8Üçù¤×/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(³ğ¸ûÿÿÿÿ8µºö¤×/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(áûåÙüÿÿÿÿ8­¶š¥×/
-c
-java:S1126#"AReplace this if-then-else statement by a single return statement.(ÁŠ”úÿÿÿÿ8Ä÷¹¥×/
-v
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¾»ºÎ8Ñâ¥×/

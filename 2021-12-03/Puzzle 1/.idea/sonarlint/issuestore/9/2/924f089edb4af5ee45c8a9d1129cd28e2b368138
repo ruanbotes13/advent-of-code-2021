@@ -1,43 +1,0 @@
-
-j
-java:S2095§"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(†Õ…Ê8††¿õ×/
-?
-java:S1643ž"Use a StringBuilder instead.(¾Žì‹øÿÿÿÿ8ç¨€ö×/
-Z
-java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8íå’ö×/
-?
-java:S1643š"Use a StringBuilder instead.(ÀÒðÄüÿÿÿÿ8ç¨€ö×/
-Q
-java:S1128"4Remove this unused import 'java.util.stream.Stream'.(ó÷Ž”8íå’ö×/
-Z
-java:S1197["8Move the array designator from the variable to the type.(ÚŽ­©þÿÿÿÿ8ž—èö×/
-w
-java:S2293¨"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÀŠý”8††¿õ×/
-Y	java:S125†"<This block of commented-out lines of code should be removed.(íðÒ£8ç¨€ö×/
-Z
-java:S1197."8Move the array designator from the variable to the type.(ÚŽ­©þÿÿÿÿ8å´áö×/
-]	java:S125"<This block of commented-out lines of code should be removed.(ÿä¨Áþÿÿÿÿ8æÆàö×/
-[
-java:S1197‡"8Move the array designator from the variable to the type.(””²‹üÿÿÿÿ8ç¨€ö×/
-U	java:S106%"9Replace this use of System.out or System.err by a logger.( ÒÀ—8ˆ¢ðö×/
-o
-java:S3776)"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(ÀèÍÜ8œ¯Ëö×/
-]	java:S125&"<This block of commented-out lines of code should be removed.(‹®Œòþÿÿÿÿ8™Šåö×/
-:
-java:S1643›"Use a StringBuilder instead.(êÿµë8ç¨€ö×/
-V	java:S106£"9Replace this use of System.out or System.err by a logger.(úé‰²8ç¨€ö×/
-Q
-java:S1144ƒ".Remove this unused private "puzzleOne" method.(ÝìÅ’úÿÿÿÿ8õâ³ö×/
-X	java:S125"<This block of commented-out lines of code should be removed.(Ï…±ñ8æÆàö×/
-T
-java:S1197\"8Move the array designator from the variable to the type.(ì°Ö;8ž—èö×/
-T
-java:S1197/"8Move the array designator from the variable to the type.(ì°Ö;8å´áö×/
-X	java:S125ˆ"<This block of commented-out lines of code should be removed.(ö†œ8ç¨€ö×/
-X	java:S125"<This block of commented-out lines of code should be removed.(§Þ¸Ö8õâ³ö×/
-o
-java:S3776V"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(Ä–„½8ž—èö×/
-V
-java:S1197…"8Move the array designator from the variable to the type.(ËÎåø8ç¨€ö×/
-:
-java:S1643Ÿ"Use a StringBuilder instead.(á”€µ8ç¨€ö×/
