@@ -1,6 +1,7 @@
 package za.co.ruanbotes;
 
 import za.co.ruanbotes.day.eight.DayEight;
+import za.co.ruanbotes.day.eleven.DayEleven;
 import za.co.ruanbotes.day.five.DayFive;
 import za.co.ruanbotes.day.four.DayFour;
 import za.co.ruanbotes.day.nine.DayNine;
@@ -17,7 +18,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        dayTen();
+        dayEleven();
+        // dayTen();
         //dayNine();
         // dayEight();
         // daySeven();
@@ -27,6 +29,14 @@ public class Main {
         // dayThree();
         // dayTwo();
         // dayOne();
+    }
+
+    /**
+     * Day 11: Dumbo Octopus
+     */
+    private static void dayEleven() {
+        DayEleven dayEleven = new DayEleven();
+        dayEleven.run();
     }
 
     /**
