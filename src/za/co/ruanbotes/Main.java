@@ -10,6 +10,7 @@ import za.co.ruanbotes.day.seven.DaySeven;
 import za.co.ruanbotes.day.six.DaySix;
 import za.co.ruanbotes.day.ten.DayTen;
 import za.co.ruanbotes.day.three.DayThree;
+import za.co.ruanbotes.day.twelve.DayTwelve;
 import za.co.ruanbotes.day.two.DayTwo;
 
 import java.io.IOException;
@@ -18,7 +19,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        dayEleven();
+        dayTwelve();
+        // dayEleven();
         // dayTen();
         //dayNine();
         // dayEight();
@@ -29,6 +31,14 @@ public class Main {
         // dayThree();
         // dayTwo();
         // dayOne();
+    }
+
+    /**
+     * Day 12: Passage Pathing
+     */
+    private static void dayTwelve() {
+        DayTwelve dayTwelve = new DayTwelve();
+        dayTwelve.run();
     }
 
     /**
