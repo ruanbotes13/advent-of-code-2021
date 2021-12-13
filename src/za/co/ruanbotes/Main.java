@@ -9,6 +9,7 @@ import za.co.ruanbotes.day.one.DayOne;
 import za.co.ruanbotes.day.seven.DaySeven;
 import za.co.ruanbotes.day.six.DaySix;
 import za.co.ruanbotes.day.ten.DayTen;
+import za.co.ruanbotes.day.thirteen.DayThirteen;
 import za.co.ruanbotes.day.three.DayThree;
 import za.co.ruanbotes.day.twelve.DayTwelve;
 import za.co.ruanbotes.day.two.DayTwo;
@@ -19,7 +20,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        dayTwelve();
+        dayThirteen();
+        //dayTwelve();
         // dayEleven();
         // dayTen();
         //dayNine();
@@ -31,6 +33,14 @@ public class Main {
         // dayThree();
         // dayTwo();
         // dayOne();
+    }
+
+    /**
+     * Day 13: Transparent Origami
+     */
+    private static void dayThirteen() {
+        DayThirteen dayThirteen = new DayThirteen();
+        dayThirteen.run();
     }
 
     /**
