@@ -4,6 +4,7 @@ import za.co.ruanbotes.day.eight.DayEight;
 import za.co.ruanbotes.day.eleven.DayEleven;
 import za.co.ruanbotes.day.five.DayFive;
 import za.co.ruanbotes.day.four.DayFour;
+import za.co.ruanbotes.day.fourteen.DayFourteen;
 import za.co.ruanbotes.day.nine.DayNine;
 import za.co.ruanbotes.day.one.DayOne;
 import za.co.ruanbotes.day.seven.DaySeven;
@@ -20,7 +21,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        dayThirteen();
+        dayFourteen();
+        //dayThirteen();
         //dayTwelve();
         // dayEleven();
         // dayTen();
@@ -33,6 +35,14 @@ public class Main {
         // dayThree();
         // dayTwo();
         // dayOne();
+    }
+
+    /**
+     * Day 14: Extended Polymerization
+     */
+    private static void dayFourteen() {
+        DayFourteen dayFourteen = new DayFourteen();
+        dayFourteen.run();
     }
 
     /**
