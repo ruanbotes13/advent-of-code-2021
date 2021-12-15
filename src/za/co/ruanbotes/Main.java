@@ -2,6 +2,7 @@ package za.co.ruanbotes;
 
 import za.co.ruanbotes.day.eight.DayEight;
 import za.co.ruanbotes.day.eleven.DayEleven;
+import za.co.ruanbotes.day.fifteen.DayFifteen;
 import za.co.ruanbotes.day.five.DayFive;
 import za.co.ruanbotes.day.four.DayFour;
 import za.co.ruanbotes.day.fourteen.DayFourteen;
@@ -21,12 +22,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        dayFourteen();
-        //dayThirteen();
-        //dayTwelve();
+        dayFifteen();
+        // dayFourteen();
+        // dayThirteen();
+        // dayTwelve();
         // dayEleven();
         // dayTen();
-        //dayNine();
+        // dayNine();
         // dayEight();
         // daySeven();
         // daySix();
@@ -35,6 +37,14 @@ public class Main {
         // dayThree();
         // dayTwo();
         // dayOne();
+    }
+
+    /**
+     * Day 15: Chiton
+     */
+    private static void dayFifteen() {
+        DayFifteen dayFifteen = new DayFifteen();
+        dayFifteen.run();
     }
 
     /**
