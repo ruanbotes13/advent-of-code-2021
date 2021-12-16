@@ -1,15 +1,27 @@
 package za.co.ruanbotes.day.two;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+
+import za.co.ruanbotes.utils.FileReader;
+import za.co.ruanbotes.utils.Printer;
+
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class DayTwo {
 
-    public void run() throws IOException {
-        Movement[] movements = readFile("resources/day/two/input.txt");
+    public void run() {
+        partOne();
+        partTwo();
+    }
+
+    private void partOne() {
+        String[] lines = FileReader.readFile("resources/day/two/input.txt");
+        Movement[] movements = convertToMovements(lines);
+        Printer.print(1, calculate(movements));
+    }
+
+    private int calculate(Movement[] movements) {
         int horizontal = 0;
         int vertical = 0;
 
@@ -24,12 +36,31 @@ public class DayTwo {
             }
         }
 
-        System.out.println("*********** Puzzle 1 **********");
-        System.out.println(horizontal * vertical);
-        System.out.println("*******************************");
+        return horizontal * vertical;
+    }
 
-        horizontal = 0;
-        vertical = 0;
+    private Movement[] convertToMovements(String[] lines) {
+        List<Movement> movementList = new ArrayList<>();
+
+        for (int i = 0; i < lines.length; i++) {
+            String[] parts = lines[i].split(" ");
+            movementList.add(
+                new Movement(Integer.parseInt(parts[1]), parts[0])
+            );
+        }
+
+        return movementList.toArray(new Movement[]{});
+    }
+
+    private void partTwo() {
+        String[] lines = FileReader.readFile("resources/day/two/input.txt");
+        Movement[] movements = convertToMovements(lines);
+        Printer.print(2, calculateTwo(movements));
+    }
+
+    private int calculateTwo(Movement[] movements) {
+        int horizontal = 0;
+        int vertical = 0;
         int aim = 0;
 
         for(int i = 0; i < movements.length; i++) {
@@ -44,22 +75,6 @@ public class DayTwo {
             }
         }
 
-        System.out.println("*********** Puzzle 2 **********");
-        System.out.println(horizontal * vertical);
-        System.out.println("*******************************");
-    }
-
-    private static Movement[] readFile(String filePath) throws IOException {
-        BufferedReader abc = new BufferedReader(new FileReader(filePath));
-        List<Movement> lines = new ArrayList<Movement>();
-        String line;
-
-        while((line = abc.readLine()) != null) {
-            String[] parts = line.split(" ");
-            lines.add(new Movement(Integer.parseInt(parts[1]), parts[0]));
-        }
-        abc.close();
-
-        return lines.toArray(new Movement[]{});
+        return horizontal * vertical;
     }
 }

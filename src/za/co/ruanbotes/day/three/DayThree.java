@@ -1,121 +1,40 @@
 package za.co.ruanbotes.day.three;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import za.co.ruanbotes.utils.FileReader;
+import za.co.ruanbotes.utils.Printer;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class DayThree {
-    public void run() throws IOException {
-        System.out.println("*********** Puzzle 1 **********");
+    public void run() {
         puzzleOne();
-        System.out.println("*******************************");
-        System.out.println("*********** Puzzle 2 **********");
         puzzleTwo();
-        System.out.println("*******************************");
     }
 
-    private void puzzleTwo() throws IOException {
-        String[] lines = readFile("resources/day/three/input.txt");
-        String oxygen = oxygenGenerator(lines, 0)[0];
-        String cotwo = cotwo(lines, 0)[0];
-        System.out.println(Integer.parseInt(oxygen, 2) * Integer.parseInt(cotwo, 2));
+    private void puzzleOne() {
+        String[] lines = FileReader.readFile("resources/day/three/input.txt");
+        int ones[] = calculateOnes(lines);
+        int zeros[] = calculateZeros(lines);
+
+        Printer.print(1, calculatePowerConsumption(ones, zeros));
     }
 
-    private String[] oxygenGenerator(String[] binaries, int position) {
-        if (binaries.length == 1) {
-            return binaries;
-        }
-        else {
-            int ones[] = new int[binaries[0].length()];
-            int zeros[] = new int[binaries[0].length()];
-
-            for (int i = 0; i < binaries.length; i++) {
-                for (int j = 0; j < binaries[i].length(); j++) {
-                    if (binaries[i].charAt(j) == '0') {
-                        zeros[j] += 1;
-                    }
-                    else {
-                        ones[j] += 1;
-                    }
-                }
-            }
-
-            List<String> list = new ArrayList<>();
-
-            for (int i = 0; i < binaries.length; i++) {
-                if (ones[position] > zeros[position]) {
-                    if (binaries[i].charAt(position) == '1') {
-                        list.add(binaries[i]);
-                    }
-                }
-                else if (ones[position] < zeros[position]) {
-                    if (binaries[i].charAt(position) == '0') {
-                        list.add(binaries[i]);
-                    }
-                } else {
-                    if (binaries[i].charAt(position) == '1') {
-                        list.add(binaries[i]);
-                    }
-                }
-            }
-
-            return oxygenGenerator(
-                list.toArray(new String[]{}),
-                position + 1
-            );
-        }
-    }
-
-    private String[] cotwo(String[] binaries, int position) {
-        if (binaries.length == 1) {
-            return binaries;
-        }
-        else {
-            int ones[] = new int[binaries[0].length()];
-            int zeros[] = new int[binaries[0].length()];
-
-            for (int i = 0; i < binaries.length; i++) {
-                for (int j = 0; j < binaries[i].length(); j++) {
-                    if (binaries[i].charAt(j) == '0') {
-                        zeros[j] += 1;
-                    }
-                    else {
-                        ones[j] += 1;
-                    }
-                }
-            }
-
-            List<String> list = new ArrayList<>();
-
-            for (int i = 0; i < binaries.length; i++) {
-                if (ones[position] > zeros[position]) {
-                    if (binaries[i].charAt(position) == '0') {
-                        list.add(binaries[i]);
-                    }
-                }
-                else if (ones[position] < zeros[position]) {
-                    if (binaries[i].charAt(position) == '1') {
-                        list.add(binaries[i]);
-                    }
-                } else {
-                    if (binaries[i].charAt(position) == '0') {
-                        list.add(binaries[i]);
-                    }
-                }
-            }
-
-            return cotwo(
-                list.toArray(new String[]{}),
-                position + 1
-            );
-        }
-    }
-
-    private void puzzleOne() throws IOException {
-        String[] lines = readFile("resources/day/three/input.txt");
+    private int[] calculateOnes(String[] lines) {
         int ones[] = new int[lines[0].length()];
+
+        for (int i = 0; i < lines.length; i++) {
+            for (int j = 0; j < lines[i].length(); j++) {
+                if (lines[i].charAt(j) == '1') {
+                    ones[j] += 1;
+                }
+            }
+        }
+
+        return ones;
+    }
+
+    private int[] calculateZeros(String[] lines) {
         int zeros[] = new int[lines[0].length()];
 
         for (int i = 0; i < lines.length; i++) {
@@ -123,12 +42,13 @@ public class DayThree {
                 if (lines[i].charAt(j) == '0') {
                     zeros[j] += 1;
                 }
-                else {
-                    ones[j] += 1;
-                }
             }
         }
 
+        return zeros;
+    }
+
+    private int calculatePowerConsumption(int[] ones, int[] zeros) {
         String gamma = "";
         String epsilon = "";
 
@@ -143,19 +63,91 @@ public class DayThree {
             }
         }
 
-        System.out.println(Integer.parseInt(gamma, 2) * Integer.parseInt(epsilon, 2));
+        return Integer.parseInt(gamma, 2) * Integer.parseInt(epsilon, 2);
     }
 
-    private static String[] readFile(String filePath) throws IOException {
-        BufferedReader abc = new BufferedReader(new FileReader(filePath));
-        List<String> lines = new ArrayList<String>();
-        String line;
+    private void puzzleTwo() {
+        String[] lines = FileReader.readFile("resources/day/three/input.txt");
+        String oxygen = oxygenGenerator(lines, 0)[0];
+        String carbonDioxide = carbonDioxide(lines, 0)[0];
+        Printer.print(2, Integer.parseInt(oxygen, 2) * Integer.parseInt(carbonDioxide, 2));
+    }
 
-        while((line = abc.readLine()) != null) {
-            lines.add(line);
+    private String[] oxygenGenerator(String[] binaries, int position) {
+        if (binaries.length == 1) {
+            return binaries;
         }
-        abc.close();
+        else {
+            int ones[] = calculateOnes(binaries);
+            int zeros[] = calculateZeros(binaries);
+            List<String> oxygenRatings = getOxygenRatings(binaries, ones, zeros, position);
 
-        return lines.toArray(new String[]{});
+            return oxygenGenerator(
+                oxygenRatings.toArray(new String[]{}),
+                position + 1
+            );
+        }
+    }
+
+    private List<String> getOxygenRatings(String[] binaries, int[] ones, int[] zeros, int position) {
+        List<String> list = new ArrayList<>();
+
+        for (int i = 0; i < binaries.length; i++) {
+            if (ones[position] > zeros[position]) {
+                if (binaries[i].charAt(position) == '1') {
+                    list.add(binaries[i]);
+                }
+            }
+            else if (ones[position] < zeros[position]) {
+                if (binaries[i].charAt(position) == '0') {
+                    list.add(binaries[i]);
+                }
+            } else {
+                if (binaries[i].charAt(position) == '1') {
+                    list.add(binaries[i]);
+                }
+            }
+        }
+
+        return list;
+    }
+
+    private String[] carbonDioxide(String[] binaries, int position) {
+        if (binaries.length == 1) {
+            return binaries;
+        }
+        else {
+            int ones[] = calculateOnes(binaries);
+            int zeros[] = calculateZeros(binaries);
+            List<String> carbonDioxideRatings = getCarbonDioxideRatings(binaries, ones, zeros, position);
+
+            return carbonDioxide(
+                carbonDioxideRatings.toArray(new String[]{}),
+                position + 1
+            );
+        }
+    }
+
+    private List<String> getCarbonDioxideRatings(String[] binaries, int[] ones, int[] zeros, int position) {
+        List<String> list = new ArrayList<>();
+
+        for (int i = 0; i < binaries.length; i++) {
+            if (ones[position] > zeros[position]) {
+                if (binaries[i].charAt(position) == '0') {
+                    list.add(binaries[i]);
+                }
+            }
+            else if (ones[position] < zeros[position]) {
+                if (binaries[i].charAt(position) == '1') {
+                    list.add(binaries[i]);
+                }
+            } else {
+                if (binaries[i].charAt(position) == '0') {
+                    list.add(binaries[i]);
+                }
+            }
+        }
+
+        return list;
     }
 }

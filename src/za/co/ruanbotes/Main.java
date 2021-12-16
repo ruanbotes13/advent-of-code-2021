@@ -10,6 +10,7 @@ import za.co.ruanbotes.day.nine.DayNine;
 import za.co.ruanbotes.day.one.DayOne;
 import za.co.ruanbotes.day.seven.DaySeven;
 import za.co.ruanbotes.day.six.DaySix;
+import za.co.ruanbotes.day.sixteen.DaySixteen;
 import za.co.ruanbotes.day.ten.DayTen;
 import za.co.ruanbotes.day.thirteen.DayThirteen;
 import za.co.ruanbotes.day.three.DayThree;
@@ -22,7 +23,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        dayFifteen();
+        daySixteen();
+        // dayFifteen();
         // dayFourteen();
         // dayThirteen();
         // dayTwelve();
@@ -37,6 +39,14 @@ public class Main {
         // dayThree();
         // dayTwo();
         // dayOne();
+    }
+
+    /**
+     * Day 16: Packet Decoder
+     */
+    private static void daySixteen() {
+        DaySixteen daySixteen = new DaySixteen();
+        daySixteen.run();
     }
 
     /**
@@ -164,11 +174,7 @@ public class Main {
      */
     private static void dayThree() {
         DayThree dayThree = new DayThree();
-        try {
-            dayThree.run();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        dayThree.run();
     }
 
     /**
@@ -176,11 +182,7 @@ public class Main {
      */
     private static void dayTwo() {
         DayTwo dayTwo = new DayTwo();
-        try {
-            dayTwo.run();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        dayTwo.run();
     }
 
     /**
@@ -188,10 +190,6 @@ public class Main {
      */
     private static void dayOne() {
         DayOne dayOne = new DayOne();
-        try {
-            dayOne.run();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        dayOne.run();
     }
 }

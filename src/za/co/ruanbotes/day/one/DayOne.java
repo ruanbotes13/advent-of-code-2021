@@ -1,24 +1,42 @@
 package za.co.ruanbotes.day.one;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import za.co.ruanbotes.utils.Converter;
+import za.co.ruanbotes.utils.FileReader;
+import za.co.ruanbotes.utils.Printer;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class DayOne {
 
-    public void run() throws IOException {
-        Integer[] depths = readFile("resources/day/one/input.txt");
-        int count = countIncreases(depths);
-        System.out.println("*********** Puzzle 1 **********");
-        System.out.println(count);
-        System.out.println("*******************************");
+    public void run() {
+        partOne();
+        partTwo();
+    }
 
-        System.out.println("*********** Puzzle 2 **********");
+    private void partOne() {
+        String[] lines = FileReader.readFile("resources/day/one/input.txt");
+        Integer[] depths = Converter.convertToIntArray(lines);
+        int count = countIncreases(depths);
+        Printer.print(1, count);
+    }
+
+    private int countIncreases(Integer[] depths) {
+        int count = 0;
+        for (int i = 1; i < depths.length; i++) {
+            if (depths[i] > depths[i-1]) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    private void partTwo() {
+        String[] lines = FileReader.readFile("resources/day/one/input.txt");
+        Integer[] depths = Converter.convertToIntArray(lines);
         int windowCount = countMovingSumIncreases(depths);
-        System.out.println(windowCount);
-        System.out.println("*******************************");
+        Printer.print(2, windowCount);
     }
 
     private int countMovingSumIncreases(Integer[] depths) {
@@ -43,29 +61,5 @@ public class DayOne {
         }
 
         return false;
-    }
-
-    private int countIncreases(Integer[] depths) {
-        int count = 0;
-        for (int i = 1; i < depths.length; i++) {
-            if (depths[i] > depths[i-1]) {
-                count++;
-            }
-        }
-
-        return count;
-    }
-
-    private Integer[] readFile(String filePath) throws IOException {
-        BufferedReader abc = new BufferedReader(new FileReader(filePath));
-        List<Integer> lines = new ArrayList<Integer>();
-        String line;
-
-        while((line = abc.readLine()) != null) {
-            lines.add(Integer.parseInt(line));
-        }
-        abc.close();
-
-        return lines.toArray(new Integer[]{});
     }
 }
